@@ -53,7 +53,7 @@ module Pod
       end
 
       # prefix = nil
-      prefix = ""
+      prefix = "WC"
 
       # loop do
       #   prefix = configurator.ask("What is your class prefix")
