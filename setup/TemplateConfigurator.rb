@@ -188,17 +188,20 @@ module Pod
     #----------------------------------------#
 
     def user_name
-      (ENV['GIT_COMMITTER_NAME'] || github_user_name || `git config user.name` || `<GITHUB_USERNAME>` ).strip
+      # (ENV['GIT_COMMITTER_NAME'] || github_user_name || `git config user.name` || `<GITHUB_USERNAME>` ).strip
+      "daydreamboy"
     end
 
     def github_user_name
-      github_user_name = `security find-internet-password -s github.com | grep acct | sed 's/"acct"<blob>="//g' | sed 's/"//g'`.strip
-      is_valid = github_user_name.empty? or github_user_name.include? '@'
-      return is_valid ? nil : github_user_name
+      # github_user_name = `security find-internet-password -s github.com | grep acct | sed 's/"acct"<blob>="//g' | sed 's/"//g'`.strip
+      # is_valid = github_user_name.empty? or github_user_name.include? '@'
+      # return is_valid ? nil : github_user_name
+      "daydreamboy"
     end
 
     def user_email
-      (ENV['GIT_COMMITTER_EMAIL'] || `git config user.email`).strip
+      # (ENV['GIT_COMMITTER_EMAIL'] || `git config user.email`).strip
+      "wesley4chen@gmail.com"
     end
 
     def year
